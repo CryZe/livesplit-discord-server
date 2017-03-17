@@ -1,6 +1,7 @@
 #![feature(plugin)]
 #![plugin(rocket_codegen)]
 
+extern crate dotenv;
 extern crate rocket;
 extern crate rocket_contrib;
 extern crate livesplit_core;
@@ -13,6 +14,8 @@ extern crate hyper_rustls;
 extern crate chashmap;
 #[macro_use]
 extern crate log;
+extern crate speedrun_bingo;
+extern crate rand;
 
 use chashmap::{CHashMap, WriteGuard};
 use livesplit_core::{Timer, Run, Segment};

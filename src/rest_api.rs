@@ -4,7 +4,7 @@ use rocket_contrib::JSON;
 use std::sync::Arc;
 use {LSState, Layout, rocket};
 use std::thread::spawn;
-use std::env;
+use dotenv::var;
 
 #[get("/split")]
 fn split(state: State<Arc<LSState>>) -> JSON<Layout> {
@@ -33,7 +33,7 @@ pub fn start(state: Arc<LSState>) {
 
         config.set_address("0.0.0.0").unwrap();
 
-        if let Ok(Ok(port)) = env::var("PORT").map(|p| p.parse()) {
+        if let Ok(Ok(port)) = var("PORT").map(|p| p.parse()) {
             config.set_port(port);
         }
 

@@ -14,7 +14,10 @@ use serenity::client::Context;
 use serenity::model::Message;
 use serenity::utils::builder::CreateEmbed;
 use serenity::utils::Colour;
-use std::{thread, time, env};
+use std::{thread, time};
+use dotenv::var;
+use speedrun_bingo::{Mode, Template};
+use rand::{Rng, thread_rng};
 
 fn send_embed_message<F>(message: &Message, create: F) -> Result<(), String>
     where F: FnOnce(CreateEmbed) -> CreateEmbed
@@ -178,6 +181,29 @@ fn create_race(_: &mut Context,
     }
 }
 
+fn create_bingo(_: &mut Context,
+                message: &Message,
+                _: Vec<String>,
+                _: &LSState)
+                -> Result<(), String> {
+    let template = include_str!("../bingo-templates/botw.json");
+    let template = Template::from_json_str(template).unwrap();
+    let mut rng = thread_rng();
+    let board = template.generate(rng.gen_range(0, 1_000_000), Mode::Normal);
+
+    let mut board_text = String::new();
+    for row in &board.cells {
+        for (i, goal) in row.iter().enumerate() {
+            if i != 0 {
+                write!(board_text, " | ").unwrap();
+            }
+            write!(board_text, "{}", goal).unwrap();
+        }
+        writeln!(board_text).unwrap();
+    }
+    send_text_message(message, &board_text)
+}
+
 fn entrants(_: &mut Context,
             message: &Message,
             _: Vec<String>,
@@ -308,7 +334,7 @@ fn ready(_: &mut Context,
 }
 
 pub fn start(state: Arc<LSState>) {
-    let token = env::var("DISCORD_TOKEN").expect("Expected DISCORD_TOKEN Environment Variable");
+    let token = var("DISCORD_TOKEN").expect("Expected DISCORD_TOKEN Environment Variable");
     let mut client = Client::login_bot(&token);
 
     client.with_framework(move |f| {
@@ -320,6 +346,7 @@ pub fn start(state: Arc<LSState>) {
         let entrants_state = state.clone();
         let enter_state = state.clone();
         let ready_state = state.clone();
+        let create_bingo_state = state.clone();
 
         f.configure(|c| c.prefix("!"))
             .on("split", move |c, m, v| split(c, m, v, &split_state))
@@ -335,6 +362,8 @@ pub fn start(state: Arc<LSState>) {
             .on("enter", move |c, m, v| enter(c, m, v, &enter_state))
             .on("ready", move |c, m, v| ready(c, m, v, &ready_state))
             .on("timer", move |c, m, v| get_state(c, m, v, &state))
+            .on("create-bingo",
+                move |c, m, v| create_bingo(c, m, v, &create_bingo_state))
     });
 
     client.start().unwrap();
