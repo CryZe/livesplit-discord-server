@@ -29,11 +29,14 @@ fn get_state(state: State<Arc<LSState>>) -> JSON<Layout> {
 
 pub fn start(state: Arc<LSState>) {
     spawn(|| {
-        let mut config = Config::build(Environment::active().unwrap());
+        let mut config = Config::new(Environment::active().unwrap()).unwrap();
+
+        config.set_address("0.0.0.0").unwrap();
+
         if let Ok(Ok(port)) = env::var("PORT").map(|p| p.parse()) {
-            config = config.port(port);
+            config.set_port(port);
         }
-        let config = config.finalize().unwrap();
+
         rocket::custom(config, true)
             .mount("/", routes![split, reset, get_state])
             .manage(state)
