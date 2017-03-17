@@ -308,8 +308,8 @@ fn ready(_: &mut Context,
 }
 
 pub fn start(state: Arc<LSState>) {
-    let token = env::var("DISCORD_TOKEN").unwrap();
-    let mut client = Client::login_bot(token);
+    let token = env::var("DISCORD_TOKEN").expect("Expected DISCORD_TOKEN Environment Variable");
+    let mut client = Client::login_bot(&token);
 
     client.with_framework(move |f| {
         let split_state = state.clone();

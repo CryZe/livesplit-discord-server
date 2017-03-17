@@ -1,8 +1,10 @@
 use rocket::request::State;
+use rocket::config::{Config, Environment};
 use rocket_contrib::JSON;
 use std::sync::Arc;
 use {LSState, Layout, rocket};
 use std::thread::spawn;
+use std::env;
 
 #[get("/split")]
 fn split(state: State<Arc<LSState>>) -> JSON<Layout> {
@@ -26,5 +28,15 @@ fn get_state(state: State<Arc<LSState>>) -> JSON<Layout> {
 }
 
 pub fn start(state: Arc<LSState>) {
-    spawn(|| rocket::ignite().mount("/", routes![split, reset, get_state]).manage(state).launch());
+    spawn(|| {
+        let mut config = Config::build(Environment::active().unwrap());
+        if let Ok(Ok(port)) = env::var("PORT").map(|p| p.parse()) {
+            config = config.port(port);
+        }
+        let config = config.finalize().unwrap();
+        rocket::custom(config, true)
+            .mount("/", routes![split, reset, get_state])
+            .manage(state)
+            .launch();
+    });
 }
