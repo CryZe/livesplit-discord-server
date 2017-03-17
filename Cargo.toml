@@ -1,0 +1,18 @@
+[package]
+name = "livesplit-server"
+version = "0.1.0"
+authors = ["Christopher Serr <christopher.serr@gmail.com>"]
+
+[dependencies]
+livesplit-core = { git = "https://github.com/CryZe/livesplit-core" }
+rocket = "0.2.0"
+rocket_codegen = "0.2.0"
+rocket_contrib = "0.2.0"
+parking_lot = "0.3.8"
+serde_derive = "0.9.5"
+serde = "0.9.5"
+serenity = "0.1.5"
+hyper = "0.10.4"
+hyper-rustls = "0.3.1"
+chashmap = "2.1.0"
+log = "0.3.6"
