@@ -113,5 +113,5 @@ fn main() {
     });
 
     rest_api::start(state.clone());
-    discord::start(state);
+    // discord::start(state);
 }
