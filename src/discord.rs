@@ -183,15 +183,28 @@ fn create_race(_: &mut Context,
 
 fn create_bingo(_: &mut Context,
                 message: &Message,
-                _: Vec<String>,
+                params: Vec<String>,
                 _: &LSState)
                 -> Result<(), String> {
     let template = include_str!("../bingo-templates/botw.json");
     let template = Template::from_json_str(template).unwrap();
-    let mut rng = thread_rng();
-    let board = template.generate(rng.gen_range(0, 1_000_000), Mode::Normal);
 
-    let mut board_text = String::new();
+    let (mode, mode_txt) = match params.get(0).map(String::as_ref) {
+        Some("short") => (Mode::Short, "short"),
+        Some("long") => (Mode::Long, "long"),
+        _ => (Mode::Normal, "normal"),
+    };
+
+    let mut rng = thread_rng();
+    let seed = rng.gen_range(0, 1_000_000);
+
+    let board = template.generate(seed, mode);
+
+    let mut board_text = format!("https://livesplit.herokuapp.com/botw/bingo/index.\
+                                  html?seed={}&mode={}\n\n",
+                                 seed,
+                                 mode_txt);
+
     for row in &board.cells {
         for (i, goal) in row.iter().enumerate() {
             if i != 0 {
@@ -362,7 +375,7 @@ pub fn start(state: Arc<LSState>) {
             .on("enter", move |c, m, v| enter(c, m, v, &enter_state))
             .on("ready", move |c, m, v| ready(c, m, v, &ready_state))
             .on("timer", move |c, m, v| get_state(c, m, v, &state))
-            .on("create-bingo",
+            .on("bingo",
                 move |c, m, v| create_bingo(c, m, v, &create_bingo_state))
     });
 
