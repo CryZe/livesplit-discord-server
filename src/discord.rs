@@ -346,6 +346,21 @@ fn ready(_: &mut Context,
     Ok(())
 }
 
+fn done(_: &mut Context, _: &Message, _: Vec<String>, _: &LSState) -> Result<(), String> {
+    // let mut race = state.race.write();
+    // let new_state = match *race {
+    //     Race::NoRace => return send_text_message(message, "There is no race!"),
+    //     Race::InProgress(ref mut race_state) => {
+
+    //     }
+    //     Race::Setup(_) => {
+    //         return send_text_message(message, "The Race is currently being set up!")
+    //     }
+    // };
+    // *race = new_state;
+    Ok(())
+}
+
 pub fn start(state: Arc<LSState>) {
     let token = var("DISCORD_TOKEN").expect("Expected DISCORD_TOKEN Environment Variable");
     let mut client = Client::login_bot(&token);
@@ -360,6 +375,7 @@ pub fn start(state: Arc<LSState>) {
         let enter_state = state.clone();
         let ready_state = state.clone();
         let create_bingo_state = state.clone();
+        let done_state = state.clone();
 
         f.configure(|c| c.prefix("!"))
             .on("split", move |c, m, v| split(c, m, v, &split_state))
@@ -374,6 +390,7 @@ pub fn start(state: Arc<LSState>) {
                 move |c, m, v| entrants(c, m, v, &entrants_state))
             .on("enter", move |c, m, v| enter(c, m, v, &enter_state))
             .on("ready", move |c, m, v| ready(c, m, v, &ready_state))
+            .on("done", move |c, m, v| done(c, m, v, &done_state))
             .on("timer", move |c, m, v| get_state(c, m, v, &state))
             .on("bingo",
                 move |c, m, v| create_bingo(c, m, v, &create_bingo_state))

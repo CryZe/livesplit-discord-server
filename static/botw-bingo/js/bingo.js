@@ -28,7 +28,7 @@ var bingo = function(bingoList, size) {
 	Math.seedrandom(SEED); //sets up the RNG
 	var MAX_SEED = 999999; //1 million cards
 	var results = $("#results");
-	results.append ("<p>SRT Bingo <strong>v1</strong>&emsp;Seed: <strong>" +
+	results.append ("<p>BotW Bingo <strong>v1</strong>&emsp;Seed: <strong>" +
 	SEED + "</strong>&emsp;Card type: <strong>" + cardtype + "</strong></p>");
 
 	var noTypeCount = 0;

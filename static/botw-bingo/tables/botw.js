@@ -1,13 +1,6 @@
 var bingoList = [
     [
         {
-            "name": "Kill a Stone Talus",
-            "types": [
-                "Rupee",
-                "Miniboss"
-            ]
-        },
-        {
             "name": "Obtain 3 Koroks on the Plateau",
             "types": [
                 "Plateau",
@@ -23,6 +16,13 @@ var bingoList = [
     ],
     [
         {
+            "name": "Kill a Stone Talus",
+            "types": [
+                "Rupee",
+                "Miniboss"
+            ]
+        },
+        {
             "name": "Obtain 3 Koroks in Dueling Peaks",
             "types": [
                 "West Necluda",
@@ -34,6 +34,27 @@ var bingoList = [
                 "Shield",
                 "Bow",
                 "Beginning Story"
+            ]
+        },
+        {
+            "name": "Activate the Dueling Peaks Tower",
+            "types": [
+                "West Necluda",
+                "Necluda",
+                "East",
+                "Beginning Story",
+                "Tower"
+            ]
+        },
+        {
+            "name": "Activate the Faron Tower",
+            "types": [
+                "Lake Floria",
+                "Lake Hylia",
+                "Faron",
+                "South",
+                "South East",
+                "Tower"
             ]
         },
         {
@@ -51,6 +72,14 @@ var bingoList = [
                 "Rupee",
                 "Great Fairy"
             ]
+        },
+        {
+            "name": "Obtain the Warm Doublet",
+            "types": [
+                "Cold Resistance",
+                "Beginning Story",
+                "Armor"
+            ]
         }
     ],
     [
@@ -67,9 +96,111 @@ var bingoList = [
                 "Bow",
                 "Beginning Story"
             ]
+        },
+        {
+            "name": "5 Korok Seeds",
+            "types": [
+                "Inventory",
+                "Korok",
+                "Weapon",
+                "Shield",
+                "Bow"
+            ]
+        },
+        {
+            "name": "Activate the Lake Tower",
+            "types": [
+                "Lake Floria",
+                "Lake Hylia",
+                "Faron",
+                "South",
+                "East",
+                "Tower"
+            ]
+        },
+        {
+            "name": "Activate the Hateno Tower",
+            "types": [
+                "East Necluda",
+                "East",
+                "Hateno",
+                "Beginning Story",
+                "Tower"
+            ]
+        },
+        {
+            "name": "Activate the Lanayru Tower",
+            "types": [
+                "Zora's Domain",
+                "Lanayru",
+                "East",
+                "Story",
+                "Tower"
+            ]
+        },
+        {
+            "name": "Return Hestu's Maracas",
+            "types": [
+                "Kakariko",
+                "Necluda",
+                "East",
+                "West Necluda",
+                "Beginning Story",
+                "Story",
+                "Korok",
+                "Weapon",
+                "Shield",
+                "Bow"
+            ]
         }
     ],
     [
+        {
+            "name": "Activate the Woodland Tower",
+            "types": [
+                "Korok Forest",
+                "North",
+                "Tower"
+            ]
+        },
+        {
+            "name": "Activate the Gerudo Tower",
+            "types": [
+                "Gerudo",
+                "South",
+                "West",
+                "Tower",
+                "Story"
+            ]
+        },
+        {
+            "name": "Activate the Akkala Tower",
+            "types": [
+                "North",
+                "East",
+                "Tower"
+            ]
+        },
+        {
+            "name": "Activate the Eldin Tower",
+            "types": [
+                "North",
+                "East",
+                "Tower",
+                "Story",
+                "Death Mountain"
+            ]
+        },
+        {
+            "name": "Activate the Hebra Tower",
+            "types": [
+                "North",
+                "West",
+                "Tower",
+                "Story",
+                "Hebra"
+            ]
+        },
         {
             "name": "Get 2000 Rupees",
             "types": [
@@ -476,6 +607,7 @@ var bingoList = [
             "name": "Free Vah Ruta",
             "types": [
                 "Zora's Domain",
+                "Lanayru",
                 "Divine Beast",
                 "Vah Ruta",
                 "Heart",
@@ -495,7 +627,6 @@ var bingoList = [
                 "Heart",
                 "North",
                 "East",
-                "North East",
                 "Story",
                 "Armor",
                 "Fire Resistance"
