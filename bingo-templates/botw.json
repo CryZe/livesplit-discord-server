@@ -287,6 +287,27 @@
     ],
     [
         {
+            "name": "Find 5 Koroks in the Dueling Peaks Tower region",
+            "types": [
+                "Korok",
+                "Dueling Peaks",
+                "West Necluda",
+                "Necluda",
+                "East",
+            ]
+        },
+		{
+            "name": "Find 5 Koroks in the Faron Tower Region",
+            "types": [
+                "Lake Floria",
+                "Lake Hylia",
+                "Faron",
+                "South",
+                "South East",
+                "Korok"
+            ]
+        },
+        {
             "name": "Kill a Hinox",
             "types": [
                 "Rupee",
@@ -312,6 +333,26 @@
         }
     ],
     [
+		{
+            "name": "Find 5 Koroks in the Lake Tower Region",
+            "types": [
+                "Lake Floria",
+                "Lake Hylia",
+                "Faron",
+                "South",
+                "East",
+                "Korok"
+            ]
+        },
+		{
+            "name": "Find 5 Koroks in the Hateno Tower Region",
+            "types": [
+                "East Necluda",
+                "East",
+                "Hateno",
+                "Korok"
+            ]
+        },
         {
             "name": "Pay 2 Great Fairies",
             "types": [
@@ -330,6 +371,32 @@
         }
     ],
     [
+        {
+            "name": "Find 5 Koroks in the Lanayru Tower Region",
+            "types": [
+                "Zora's Domain",
+                "Lanayru",
+                "East",
+                "Korok"
+            ]
+        },
+		{
+            "name": "Find 5 Koroks in the Wasteland Tower Region",
+            "types": [
+                "Gerudo",
+                "South",
+                "West",
+                "Korok",
+            ]
+        },
+        {
+            "name": "Find 5 Koroks in the Ridgeland Tower Region",
+            "types": [
+                "Center",
+                "West",
+                "Korok"
+            ]
+        },
         {
             "name": "Get the Sheikah Set",
             "types": [
@@ -356,6 +423,31 @@
     ],
     [
         {
+            "name": "Find 5 Koroks in the Central Tower Region",
+            "types": [
+                "Center",
+                "Central Hyrule",
+                "Korok"
+            ]
+        },
+		{
+            "name": "Find 5 Koroks in the Woodland Tower Region",
+            "types": [
+                "Korok Forest",
+                "North",
+                "Korok"
+            ]
+        },
+        {
+            "name": "Find 5 Koroks in the Gerudo Tower Region",
+            "types": [
+                "Gerudo",
+                "South",
+                "West",
+                "Korok",
+            ]
+        },
+        {
             "name": "Bake an Apple Pie",
             "types": [
                 "Rupee"
@@ -371,6 +463,32 @@
         }
     ],
     [
+        {
+            "name": "Find 5 Koroks in the Akkala Tower Region",
+            "types": [
+                "North",
+                "East",
+                "Korok"
+            ]
+        },
+		{
+            "name": "Find 5 Koroks in the Eldin Tower Region",
+            "types": [
+                "North",
+                "East",
+                "Korok",
+                "Death Mountain"
+            ]
+        },
+		 {
+            "name": "Find 5 Koroks in the Hebra Tower Region",
+            "types": [
+                "North",
+                "West",
+                "Korok",
+                "Hebra"
+            ]
+        },
         {
             "name": "Complete the 'Stranded on Eventide' Side Quest",
             "types": [
@@ -427,7 +545,7 @@
                 "Shrine"
             ]
         }
-    ],
+    ], //Short cards end here
     [
         {
             "name": "Obtain a Material from Naydra",
