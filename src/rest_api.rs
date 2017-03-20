@@ -40,6 +40,12 @@ fn botw_bingo(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("static/botw-bingo").join(file)).ok()
 }
 
+#[get("/botw/bingo/tables/board.js")]
+fn botw_bingo_board() -> String {
+    format!(r#"var bingoList = {}; $(function () {{ srl.bingo(bingoList, 5); }});"#,
+            include_str!("../bingo-templates/botw.json"))
+}
+
 pub fn start(state: Arc<LSState>) {
     spawn(|| {
         let mut config = Config::new(Environment::active().unwrap()).unwrap();
@@ -52,7 +58,12 @@ pub fn start(state: Arc<LSState>) {
 
         rocket::custom(config, true)
             .mount("/",
-                   routes![split, reset, get_state, botw_bingo, botw_bingo_params])
+                   routes![split,
+                           reset,
+                           get_state,
+                           botw_bingo,
+                           botw_bingo_params,
+                           botw_bingo_board])
             .manage(state)
             .launch();
     });

@@ -8,7 +8,6 @@ livesplit-core = { git = "https://github.com/CryZe/livesplit-core" }
 speedrun-bingo = { git = "https://github.com/CryZe/speedrun-bingo" }
 rocket = "0.2.0"
 rocket_codegen = "0.2.0"
-rocket_contrib = "0.2.0"
 parking_lot = "0.3.8"
 serde_derive = "0.9.5"
 serde = "0.9.5"
@@ -19,3 +18,7 @@ chashmap = "2.1.0"
 log = "0.3.6"
 dotenv = { git = "https://github.com/slapresta/rust-dotenv", rev = "a82fb37876603a510b2ddb04ec5b4d471fad5056" }
 rand = "0.3.15"
+
+[dependencies.rocket_contrib]
+version = "0.2.0"
+features = ["handlebars_templates"]

@@ -12,16 +12,18 @@
                 "Bow",
                 "Beginning Story"
             ]
+        },
+        {
+            "name": "Open a Bokoblin Camp Chest",
+            "types": [
+                "Plateau",
+                "Center",
+                "Inventory",
+                "Beginning Story"
+            ]
         }
     ],
     [
-        {
-            "name": "Kill a Stone Talus",
-            "types": [
-                "Rupee",
-                "Miniboss"
-            ]
-        },
         {
             "name": "Obtain 3 Koroks in Dueling Peaks",
             "types": [
@@ -34,6 +36,24 @@
                 "Shield",
                 "Bow",
                 "Beginning Story"
+            ]
+        },
+        {
+            "name": "Open 2 Bokoblin Camp Chests",
+            "types": [
+                "Plateau",
+                "Center",
+                "Inventory",
+                "Beginning Story"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "Kill a Stone Talus",
+            "types": [
+                "Rupee",
+                "Miniboss"
             ]
         },
         {
@@ -56,7 +76,9 @@
                 "South East",
                 "Tower"
             ]
-        },
+        }
+    ],
+    [
         {
             "name": "Pay 1 Great Fairy",
             "types": [
@@ -84,7 +106,7 @@
     ],
     [
         {
-            "name": "Obtain 2 Koroks in Hateno",
+            "name": "Obtain 2 Koroks in the Hateno Region",
             "types": [
                 "East Necluda",
                 "East",
@@ -98,7 +120,7 @@
             ]
         },
         {
-            "name": "5 Korok Seeds",
+            "name": "Collect 5 Korok Seeds",
             "types": [
                 "Inventory",
                 "Korok",
@@ -152,9 +174,55 @@
                 "Shield",
                 "Bow"
             ]
+        },
+        {
+            "name": "Activate the Wasteland Tower",
+            "types": [
+                "Gerudo",
+                "South",
+                "West",
+                "Tower",
+                "Story"
+            ]
+        },
+        {
+            "name": "Activate the Ridgeland Tower",
+            "types": [
+                "Center",
+                "West",
+                "Tower"
+            ]
+        },
+        {
+            "name": "Activate the Central Tower",
+            "types": [
+                "Center",
+                "Central Hyrule",
+                "Tower"
+            ]
+        },
+        {
+            "name": "Kill a Wizzrobe",
+            "types": []
+        },
+        {
+            "name": "Complete a Minor Test of Strength Shrine",
+            "types": [
+                "Shrine",
+                "Soul Orb",
+                "Heart",
+                "Stamina",
+                "Ancient Item"
+            ]
         }
     ],
     [
+        {
+            "name": "Complete the 'Flown the Coop' Side Quest",
+            "types": [
+                "Side Quest"
+            ]
+        },
         {
             "name": "Activate the Woodland Tower",
             "types": [
@@ -182,6 +250,14 @@
             ]
         },
         {
+            "name": "Talk to Kilton",
+            "types": [
+                "North",
+                "East",
+                "Monster Part"
+            ]
+        },
+        {
             "name": "Activate the Eldin Tower",
             "types": [
                 "North",
@@ -192,17 +268,7 @@
             ]
         },
         {
-            "name": "Activate the Hebra Tower",
-            "types": [
-                "North",
-                "West",
-                "Tower",
-                "Story",
-                "Hebra"
-            ]
-        },
-        {
-            "name": "Get 2000 Rupees",
+            "name": "Collect 2000 Rupees",
             "types": [
                 "Rupee"
             ]
@@ -232,6 +298,16 @@
             "types": [
                 "Memory",
                 "Story"
+            ]
+        },
+        {
+            "name": "Activate the Hebra Tower",
+            "types": [
+                "North",
+                "West",
+                "Tower",
+                "Story",
+                "Hebra"
             ]
         }
     ],
@@ -296,7 +372,7 @@
     ],
     [
         {
-            "name": "Complete 'Stranded on Eventide'",
+            "name": "Complete the 'Stranded on Eventide' Side Quest",
             "types": [
                 "Side Quest",
                 "South",
@@ -309,13 +385,11 @@
             ]
         },
         {
-            "name": "Finish all 3 Korok Trials",
+            "name": "Register the Royal Horse",
             "types": [
-                "Korok Forest",
-                "North",
-                "Shrine",
-                "Soul Orb",
-                "Heart",
+                "Center",
+                "Central Hyrule",
+                "Horse",
                 "Stamina"
             ]
         }
@@ -356,15 +430,6 @@
     ],
     [
         {
-            "name": "Register the Royal Horse",
-            "types": [
-                "Center",
-                "Central Hyrule",
-                "Horse",
-                "Stamina"
-            ]
-        },
-        {
             "name": "Obtain a Material from Naydra",
             "types": [
                 "Necluda",
@@ -384,6 +449,17 @@
                 "Camera",
                 "Hateno",
                 "Beginning Story"
+            ]
+        },
+        {
+            "name": "Finish all 3 Korok Trials",
+            "types": [
+                "Korok Forest",
+                "North",
+                "Shrine",
+                "Soul Orb",
+                "Heart",
+                "Stamina"
             ]
         }
     ],
@@ -405,6 +481,16 @@
                 "West",
                 "North West"
             ]
+        },
+        {
+            "name": "Complete a Modest Test of Strength Shrine",
+            "types": [
+                "Shrine",
+                "Soul Orb",
+                "Heart",
+                "Stamina",
+                "Ancient Item"
+            ]
         }
     ],
     [
@@ -415,7 +501,7 @@
             ]
         },
         {
-            "name": "20 Korok Seeds",
+            "name": "Collect 20 Korok Seeds",
             "types": [
                 "Inventory",
                 "Korok",
@@ -458,6 +544,21 @@
                 "Divine Beast",
                 "Story"
             ]
+        },
+        {
+            "name": "Get the Flamebreaker Set",
+            "types": [
+                "Death Mountain",
+                "Divine Beast",
+                "Vah Rudania",
+                "Heart",
+                "North",
+                "East",
+                "Story",
+                "Armor",
+                "Rupee",
+                "Fire Resistance"
+            ]
         }
     ],
     [
@@ -495,6 +596,16 @@
                 "Heart",
                 "Divine Beast"
             ]
+        },
+        {
+            "name": "Get the Rubber Set",
+            "types": [
+                "East",
+                "Zora's Domain",
+                "Armor",
+                "Divine Beast",
+                "Story"
+            ]
         }
     ],
     [
@@ -521,7 +632,7 @@
     ],
     [
         {
-            "name": "Complete 5 Side Quests",
+            "name": "Complete 3 Side Quests",
             "types": [
                 "Side Quest"
             ]
@@ -539,7 +650,7 @@
     ],
     [
         {
-            "name": "Complete 10 Side Quests",
+            "name": "Complete 5 Side Quests",
             "types": [
                 "Side Quest"
             ]
@@ -566,7 +677,9 @@
                 "North",
                 "Guardian"
             ]
-        },
+        }
+    ],
+    [
         {
             "name": "Pay 3 Great Fairies",
             "types": [
@@ -581,6 +694,14 @@
                 "Armor Upgrade",
                 "Rupee",
                 "Great Fairy"
+            ]
+        },
+        {
+            "name": "Free a Divine Beast",
+            "types": [
+                "Divine Beast",
+                "Story",
+                "Heart"
             ]
         }
     ],
@@ -600,9 +721,7 @@
                 "Cold Resistance",
                 "Hebra"
             ]
-        }
-    ],
-    [
+        },
         {
             "name": "Free Vah Ruta",
             "types": [
@@ -617,7 +736,9 @@
                 "Swim Speed",
                 "Arrow"
             ]
-        },
+        }
+    ],
+    [
         {
             "name": "Free Vah Rudania",
             "types": [
@@ -631,9 +752,7 @@
                 "Armor",
                 "Fire Resistance"
             ]
-        }
-    ],
-    [
+        },
         {
             "name": "Free Vah Naboris",
             "types": [
@@ -661,16 +780,6 @@
                 "North",
                 "Guardian"
             ]
-        }
-    ],
-    [
-        {
-            "name": "Beat Ganon",
-            "types": [
-                "Hyrule Castle",
-                "Ganon",
-                "North"
-            ]
         },
         {
             "name": "Activate all Towers",
@@ -681,7 +790,7 @@
     ],
     [
         {
-            "name": "Complete 15 Side Quests",
+            "name": "Complete 10 Side Quests",
             "types": [
                 "Side Quest"
             ]
@@ -701,15 +810,21 @@
                 "Rupee",
                 "Great Fairy"
             ]
-        }
-    ],
-    [
+        },
         {
             "name": "Get the Master Sword",
             "types": [
                 "Korok Forest",
                 "North",
                 "Heart"
+            ]
+        },
+        {
+            "name": "Beat Ganon",
+            "types": [
+                "Hyrule Castle",
+                "Ganon",
+                "North"
             ]
         }
     ]
