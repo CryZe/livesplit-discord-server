@@ -293,10 +293,10 @@
                 "Dueling Peaks",
                 "West Necluda",
                 "Necluda",
-                "East",
+                "East"
             ]
         },
-		{
+        {
             "name": "Find 5 Koroks in the Faron Tower Region",
             "types": [
                 "Lake Floria",
@@ -333,7 +333,7 @@
         }
     ],
     [
-		{
+        {
             "name": "Find 5 Koroks in the Lake Tower Region",
             "types": [
                 "Lake Floria",
@@ -344,7 +344,7 @@
                 "Korok"
             ]
         },
-		{
+        {
             "name": "Find 5 Koroks in the Hateno Tower Region",
             "types": [
                 "East Necluda",
@@ -380,13 +380,13 @@
                 "Korok"
             ]
         },
-		{
+        {
             "name": "Find 5 Koroks in the Wasteland Tower Region",
             "types": [
                 "Gerudo",
                 "South",
                 "West",
-                "Korok",
+                "Korok"
             ]
         },
         {
@@ -430,7 +430,7 @@
                 "Korok"
             ]
         },
-		{
+        {
             "name": "Find 5 Koroks in the Woodland Tower Region",
             "types": [
                 "Korok Forest",
@@ -444,7 +444,7 @@
                 "Gerudo",
                 "South",
                 "West",
-                "Korok",
+                "Korok"
             ]
         },
         {
@@ -471,7 +471,7 @@
                 "Korok"
             ]
         },
-		{
+        {
             "name": "Find 5 Koroks in the Eldin Tower Region",
             "types": [
                 "North",
@@ -480,7 +480,7 @@
                 "Death Mountain"
             ]
         },
-		 {
+        {
             "name": "Find 5 Koroks in the Hebra Tower Region",
             "types": [
                 "North",
@@ -545,7 +545,7 @@
                 "Shrine"
             ]
         }
-    ], 
+    ],
     [
         {
             "name": "Obtain a Material from Naydra",
