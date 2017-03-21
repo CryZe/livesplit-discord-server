@@ -321,9 +321,9 @@
                 "Stamina",
                 "Gerudo",
                 "South",
-                "West",
+                "West"
             ]
-        } 
+        },
         {
             "name": "Complete the 'Forgotten Temple' Shrine",
             "types": [
@@ -333,16 +333,16 @@
                 "Stamina",
                 "Gerudo",
                 "South",
-                "West",
+                "West"
             ]
-        }
+        },
         {
             "name": "Complete the 'Twin Memories' shrines",
             "types": [
                 "Shrine",
                 "Soul Orb",
                 "Heart",
-                "Stamina",
+                "Stamina"
             ]
         },
         {
