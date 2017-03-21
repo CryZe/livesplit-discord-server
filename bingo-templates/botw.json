@@ -313,6 +313,39 @@
     ],
     [
         {
+            "name": "Complete the 'Gut Check' Shrine",
+            "types": [
+                "Shrine",
+                "Soul Orb",
+                "Heart",
+                "Stamina",
+                "Gerudo",
+                "South",
+                "West",
+            ]
+        } 
+        {
+            "name": "Complete the 'Forgotten Temple' Shrine",
+            "types": [
+                "Shrine",
+                "Soul Orb",
+                "Heart",
+                "Stamina",
+                "Gerudo",
+                "South",
+                "West",
+            ]
+        }
+        {
+            "name": "Complete the 'Twin Memories' shrines",
+            "types": [
+                "Shrine",
+                "Soul Orb",
+                "Heart",
+                "Stamina",
+            ]
+        },
+        {
             "name": "Pay 2 Great Fairies",
             "types": [
                 "North",
@@ -355,6 +388,15 @@
         }
     ],
     [
+        {
+            "name": "Read Zelda's Diary",
+            "types": [
+                "Central Hyrule",
+                "Hyrule Castle",
+                "North",
+                "Story"
+            ]
+        },
         {
             "name": "Bake an Apple Pie",
             "types": [
@@ -493,7 +535,25 @@
             ]
         }
     ],
-    [
+    [ 
+        {
+            "name": "Complete the Shield Surfing minigame",
+            "types": [
+                "Minigame"
+                "North",
+                "West",
+                "Hebra"
+            ]
+        },
+        {
+            "name": "Complete the Bowling minigame",
+            "types": [
+                "Minigame"
+                "North",
+                "West",
+                "Hebra"
+            ]
+        },
         {
             "name": "Activate 4 Towers",
             "types": [
@@ -631,6 +691,13 @@
         }
     ],
     [
+        {
+            "name": "Collect 4 Memories",
+            "types": [
+                "Memory",
+                "Story"
+            ]
+        },
         {
             "name": "Complete 3 Side Quests",
             "types": [
