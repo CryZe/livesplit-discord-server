@@ -546,7 +546,7 @@
             ]
         }
     ], 
-    [ 								"_comment": "Short cards end above",
+    [
         {
             "name": "Obtain a Material from Naydra",
             "types": [
