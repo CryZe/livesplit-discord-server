@@ -24,6 +24,19 @@
         }
     ],
     [
+	{
+            "name": "Complete the 'Watch Out for the Flowers' Shrine Quest",
+            "types": [
+                "Shrine",
+		"Shrine Quest",
+                "Soul Orb",
+                "Heart",
+                "Stamina",
+		"West Necluda",
+                "Necluda",
+                "East",
+            ]
+        },
         {
             "name": "Obtain 3 Koroks in Dueling Peaks",
             "types": [
@@ -54,6 +67,18 @@
             "types": [
                 "Rupee",
                 "Miniboss"
+            ]
+        },
+	{
+            "name": "Complete the 'Crowned Beast' Shrine Quest",
+            "types": [
+                "Shrine",
+		"Shrine Quest",
+                "Soul Orb",
+                "Heart",
+                "Stamina",
+                "Lanayru",
+                "East",
             ]
         },
         {
@@ -93,6 +118,18 @@
                 "Armor Upgrade",
                 "Rupee",
                 "Great Fairy"
+            ]
+        },
+	{
+            "name": "Complete the 'Master of the Wind' Shrine Quest",
+            "types": [
+                "Shrine",
+		"Shrine Quest",
+                "Soul Orb",
+                "Heart",
+                "Stamina",
+                "Lanayru",
+                "East",
             ]
         },
         {
@@ -286,18 +323,24 @@
         }
     ],
     [
+	{
+            "name": "Complete the 'Song of Storms' Shrine Quest",
+            "types": [
+                "Shrine Quest",
+                "South",
+                "Faron",
+                "East Necluda",
+                "Shrine",
+                "Heart",
+                "Stamina",
+                "Thunder",
+            ]
+        },
         {
             "name": "Kill a Hinox",
             "types": [
                 "Rupee",
                 "Miniboss"
-            ]
-        },
-        {
-            "name": "Collect 2 Memories",
-            "types": [
-                "Memory",
-                "Story"
             ]
         },
         {
@@ -313,26 +356,27 @@
     ],
     [
         {
-            "name": "Complete the 'Gut Check' Shrine",
+            "name": "Complete 'The Gut Check Challenge' Shrine Quest",
             "types": [
                 "Shrine",
+		"Shrine Quest",
                 "Soul Orb",
                 "Heart",
                 "Stamina",
-                "Gerudo",
-                "South",
-                "West"
+                "Eldin",
+                "North",
+                "East"
             ]
         },
         {
-            "name": "Complete the 'Forgotten Temple' Shrine",
+            "name": "Complete the Forgotten Temple's Shrine",
             "types": [
                 "Shrine",
                 "Soul Orb",
                 "Heart",
                 "Stamina",
-                "Gerudo",
-                "South",
+                "Hebra",
+                "North",
                 "West"
             ]
         },
@@ -343,6 +387,9 @@
                 "Soul Orb",
                 "Heart",
                 "Stamina"
+                "West Necluda",
+                "Necluda",
+                "East",
             ]
         },
         {
@@ -363,6 +410,17 @@
         }
     ],
     [
+	{
+            "name": "Complete the 'Shrouded Shrine' Shrine Quest",
+            "types": [
+                "Shrine",
+		"Shrine Quest",
+		"North",
+                "Soul Orb",
+                "Heart",
+                "Stamina"
+            ]
+        },
         {
             "name": "Get the Sheikah Set",
             "types": [
@@ -414,9 +472,21 @@
     ],
     [
         {
-            "name": "Complete the 'Stranded on Eventide' Side Quest",
+            "name": "Complete the Vortex Shrine Quest",
             "types": [
-                "Side Quest",
+                "East",
+                "South",
+                "South East",
+                "Faron",
+                "Necluda",
+                "Shrine",
+                "Shrine Quest"
+            ]
+        }
+        {
+            "name": "Complete the 'Stranded on Eventide' Shrine Quest",
+            "types": [
+                "Shrine Quest",
                 "South",
                 "East",
                 "South East",
@@ -459,18 +529,26 @@
             ]
         },
         {
-            "name": "Defeat the 3 Hinox Brothers",
+            "name": "Complete the 'Three Giant Brothers' Shrine Quest",
             "types": [
                 "East",
                 "South",
                 "South East",
                 "Faron",
                 "Necluda",
-                "Shrine"
+                "Shrine",
+                "Shrine Quest"
             ]
         }
     ],
     [
+        {
+            "name": "Collect 2 Memories",
+            "types": [
+                "Memory",
+                "Story"
+            ]
+        },
         {
             "name": "Obtain a Material from Naydra",
             "types": [
@@ -494,7 +572,7 @@
             ]
         },
         {
-            "name": "Finish all 3 Korok Trials",
+            "name": "Finish a Korok Trial",
             "types": [
                 "Korok Forest",
                 "North",
@@ -506,6 +584,17 @@
         }
     ],
     [
+        {
+            "name": "Complete the 'Guardian Slideshow' Shrine Quest",
+            "types": [
+                "Shrine Quest",
+                "South",
+                "Shrine",
+                "Heart",
+                "Stamina",
+		"Camera"
+            ]
+        },
         {
             "name": "Obtain a Material from Farosh",
             "types": [
@@ -669,6 +758,19 @@
         }
     ],
     [
+	{
+            "name": "Complete the 'Fragmented Monument' Shrine Quest",
+            "types": [
+                "Shrine Quest",
+                "South",
+                "Faron",
+                "East Necluda",
+                "Shrine",
+                "Heart",
+                "Stamina",
+                "Thunder",
+            ]
+        },
         {
             "name": "Complete 'Rushroom Rush' Side Quest",
             "types": [
@@ -698,6 +800,14 @@
                 "Story"
             ]
         },
+	{
+            "name": "Fill out 20 creatures in the Compendium",
+            "types": [
+                "Camera",
+                "Compendium",
+                "Story"
+            ]
+        },
         {
             "name": "Complete 3 Side Quests",
             "types": [
@@ -716,6 +826,22 @@
         }
     ],
     [
+	{
+            "name": "Fill out 20 monsters in the Compendium",
+            "types": [
+                "Camera",
+                "Compendium",
+                "Story"
+            ]
+        },
+	{
+            "name": "Fill out 20 equipment in the Compendium",
+            "types": [
+                "Camera",
+                "Compendium",
+                "Story"
+            ]
+        },
         {
             "name": "Complete 5 Side Quests",
             "types": [
@@ -733,7 +859,26 @@
             ]
         }
     ],
-    [
+    [	
+	{
+            "name": "Buy the Bokoblin Mask from Kilton",
+            "types": [
+                "Soul Orb",
+                "Heart",
+                "Stamina",
+                "Ancient Item"
+            ]
+        },
+        {
+            "name": "Complete 15 Shrines",
+            "types": [
+                "Shrine",
+                "Soul Orb",
+                "Heart",
+                "Stamina",
+                "Ancient Item"
+            ]
+        },
         {
             "name": "Kill 10 Guardians",
             "types": [
