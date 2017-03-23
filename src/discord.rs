@@ -398,3 +398,21 @@ pub fn start(state: Arc<LSState>) {
 
     client.start().unwrap();
 }
+
+#[test]
+fn verify_bingo_board() {
+    let template = include_str!("../bingo-templates/botw.json");
+    let template = Template::from_json_str(template).unwrap();
+
+    let mut rng = thread_rng();
+    let seed = rng.gen_range(0, 1_000_000);
+
+    template.generate(seed, Mode::Short);
+
+    let mut goals = template.0.iter().flat_map(|r| r.iter()).map(|g| &g.name).collect::<Vec<_>>();
+    goals.sort();
+
+    for (a, b) in goals.iter().zip(goals.iter().skip(1)) {
+        assert_ne!(a, b);
+    }
+}
