@@ -38,20 +38,6 @@
             ]
         },
         {
-            "name": "Obtain 3 Koroks in Dueling Peaks",
-            "types": [
-                "West Necluda",
-                "Necluda",
-                "East",
-                "Inventory",
-                "Korok",
-                "Weapon",
-                "Shield",
-                "Bow",
-                "Beginning Story"
-            ]
-        },
-        {
             "name": "Open 2 Bokoblin Camp Chests",
             "types": [
                 "Plateau",
@@ -324,6 +310,27 @@
     ],
     [
 	{
+            "name": "Find 5 Koroks in the Dueling Peaks Tower region",
+            "types": [
+                "Korok",
+                "Dueling Peaks",
+                "West Necluda",
+                "Necluda",
+                "East"
+            ]
+        },
+        {
+            "name": "Find 5 Koroks in the Faron Tower Region",
+            "types": [
+                "Lake Floria",
+                "Lake Hylia",
+                "Faron",
+                "South",
+                "South East",
+                "Korok"
+            ]
+        },
+	{
             "name": "Complete the 'Song of Storms' Shrine Quest",
             "types": [
                 "Shrine Quest",
@@ -392,6 +399,26 @@
                 "East",
             ]
         },
+	{
+            "name": "Find 5 Koroks in the Lake Tower Region",
+            "types": [
+                "Lake Floria",
+                "Lake Hylia",
+                "Faron",
+                "South",
+                "East",
+                "Korok"
+            ]
+        },
+        {
+            "name": "Find 5 Koroks in the Hateno Tower Region",
+            "types": [
+                "East Necluda",
+                "East",
+                "Hateno",
+                "Korok"
+            ]
+        },
         {
             "name": "Pay 2 Great Fairies",
             "types": [
@@ -455,6 +482,31 @@
                 "Story"
             ]
         },
+	{
+            "name": "Find 5 Koroks in the Central Tower Region",
+            "types": [
+                "Center",
+                "Central Hyrule",
+                "Korok"
+            ]
+        },
+        {
+            "name": "Find 5 Koroks in the Woodland Tower Region",
+            "types": [
+                "Korok Forest",
+                "North",
+                "Korok"
+            ]
+        },
+        {
+            "name": "Find 5 Koroks in the Gerudo Tower Region",
+            "types": [
+                "Gerudo",
+                "South",
+                "West",
+                "Korok"
+            ]
+        },
         {
             "name": "Bake an Apple Pie",
             "types": [
@@ -470,7 +522,33 @@
             ]
         }
     ],
-    [
+    [ 
+	{
+            "name": "Find 5 Koroks in the Akkala Tower Region",
+            "types": [
+                "North",
+                "East",
+                "Korok"
+            ]
+        },
+        {
+            "name": "Find 5 Koroks in the Eldin Tower Region",
+            "types": [
+                "North",
+                "East",
+                "Korok",
+                "Death Mountain"
+            ]
+        },
+        {
+            "name": "Find 5 Koroks in the Hebra Tower Region",
+            "types": [
+                "North",
+                "West",
+                "Korok",
+                "Hebra"
+            ]
+        },
         {
             "name": "Complete the Vortex Shrine Quest",
             "types": [
@@ -482,7 +560,7 @@
                 "Shrine",
                 "Shrine Quest"
             ]
-        }
+        },
         {
             "name": "Complete the 'Stranded on Eventide' Shrine Quest",
             "types": [
