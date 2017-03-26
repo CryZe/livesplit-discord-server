@@ -184,7 +184,7 @@
             ]
         },
         {
-            "name": "Return Hestu's Maracas",
+            "name": "Complete 'The Priceless Maracas' Side Quest",
             "types": [
                 "Kakariko",
                 "Necluda",
@@ -192,10 +192,6 @@
                 "West Necluda",
                 "Beginning Story",
                 "Story",
-                "Korok",
-                "Weapon",
-                "Shield",
-                "Bow"
             ]
         },
         {
@@ -243,6 +239,9 @@
         {
             "name": "Complete the 'Flown the Coop' Side Quest",
             "types": [
+                "Impa",
+                "West Necluda",
+                "Kakariko",
                 "Side Quest"
             ]
         },
@@ -611,6 +610,16 @@
         }
     ],
     [
+	{
+            "name": "Complete 'The Statue's Bargain' Side Quest",
+            "types": [
+                "Side Quest",
+                "East Necluda",
+                "Hateno",
+                "Heart",
+                "Stamina"
+            ]
+        },
         {
             "name": "Kill a Walking Guardian",
             "types": [
@@ -765,6 +774,14 @@
         }
     ],
     [
+	{
+            "name": "Complete the 'Robbie's Research' Side Quest",
+            "types": [
+                "Side Quest",
+                "Akkala",
+                "Hateno"
+            ]
+        },
         {
             "name": "Upgrade All Runes",
             "types": [
@@ -863,6 +880,14 @@
     ],
     [
         {
+            "name": "Complete 'Little Sister's Big Request' Side Quest",
+            "types": [
+                "Akkala",
+                "Eldin",
+                "Side Quest"
+            ]
+        },
+        {
             "name": "Complete the 'Fragmented Monument' Shrine Quest",
             "types": [
                 "Shrine Quest",
@@ -897,6 +922,15 @@
         }
     ],
     [
+	{
+            "name": "Complete 'The Stolen Heirloom' Shrine Quest",
+            "types": [
+                "Shrine Quest",
+                "West Necluda",
+                "Kakariko",
+                "Shrine"
+            ]
+        },
         {
             "name": "Collect 4 Memories",
             "types": [
@@ -930,6 +964,16 @@
         }
     ],
     [
+        {
+            "name": "Complete 'Leviathan Bones' Side Quest",
+            "types": [
+                "Gerudo",
+                "Hebra",
+                "Eldin",
+                "Camera",
+                "Side Quest"
+            ]
+        },
         {
             "name": "Fill out 20 monsters in the Compendium",
             "types": [
@@ -967,10 +1011,7 @@
         {
             "name": "Buy the Bokoblin Mask from Kilton",
             "types": [
-                "Soul Orb",
-                "Heart",
-                "Stamina",
-                "Ancient Item"
+                "Monster Part"
             ]
         },
         {
