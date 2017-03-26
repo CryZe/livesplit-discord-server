@@ -21,6 +21,14 @@
                 "Inventory",
                 "Beginning Story"
             ]
+        },
+        {
+            "name": "Obtain the Warm Doublet",
+            "types": [
+                "Cold Resistance",
+                "Beginning Story",
+                "Armor"
+            ]
         }
     ],
     [
@@ -116,14 +124,6 @@
                 "Stamina",
                 "Lanayru",
                 "East"
-            ]
-        },
-        {
-            "name": "Obtain the Warm Doublet",
-            "types": [
-                "Cold Resistance",
-                "Beginning Story",
-                "Armor"
             ]
         }
     ],
