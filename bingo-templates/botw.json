@@ -1,38 +1,37 @@
 [
     [
         {"name": "Obtain 3 Koroks on the Plateau", "types": ["Plateau", "Center", "Inventory", "Korok", "Weapon", "Shield", "Bow", "Beginning Story"] },
-        {"name": "Open a Bokoblin Camp Chest", "types": ["Plateau", "Center", "Inventory", "Beginning Story"] },
-        {"name": "Obtain the Warm Doublet", "types": ["Cold Resistance", "Beginning Story", "Armor"] }
-    ],
-    [
+        {"name": "Obtain the Warm Doublet", "types": ["Cold Resistance", "Beginning Story", "Armor"] },
         {"name": "Complete the 'Watch Out for the Flowers' Shrine Quest", "types": ["Shrine", "Shrine Quest", "Soul Orb", "Heart", "Stamina", "West Necluda", "Necluda", "East"] },
         {"name": "Open 2 Bokoblin Camp Chests", "types": ["Plateau", "Center", "Inventory", "Beginning Story"] }
     ],
     [
-        {"name": "Kill a Stone Talus", "types": ["Rupee", "Miniboss"] },
-        {"name": "Complete the 'Crowned Beast' Shrine Quest", "types": ["Shrine", "Shrine Quest", "Soul Orb", "Heart", "Stamina", "Lanayru", "East"] },
+		{"name": "Kill a Stone Talus", "types": ["Rupee", "Miniboss"] },
+        {"name": "Kill a Wizzrobe", "types": ["Miniboss"]},
         {"name": "Activate the Dueling Peaks Tower", "types": ["West Necluda", "Necluda", "East", "Beginning Story", "Tower"] },
         {"name": "Activate the Faron Tower", "types": ["Lake Floria", "Lake Hylia", "Faron", "South", "South East", "Tower"] }
     ],
     [
-        {"name": "Pay 1 Great Fairy", "types": ["North", "East", "West", "Akkala", "Gerudo", "Rito", "Necluda", "West Necluda", "Armor Upgrade", "Rupee", "Great Fairy"] },
-        {"name": "Complete the 'Master of the Wind' Shrine Quest", "types": ["Shrine", "Shrine Quest", "Soul Orb", "Heart", "Stamina", "Lanayru", "East"] }
-    ],
-    [
-        {"name": "Obtain 2 Koroks in the Hateno Region", "types": ["East Necluda", "East", "Hateno", "Inventory", "Korok", "Weapon", "Shield", "Bow", "Beginning Story"] },
-        {"name": "Collect 5 Korok Seeds", "types": ["Inventory", "Korok", "Weapon", "Shield", "Bow"] },
-        {"name": "Activate the Lake Tower", "types": ["Lake Floria", "Lake Hylia", "Faron", "South", "East", "Tower"] },
-        {"name": "Activate the Hateno Tower", "types": ["East Necluda", "East", "Hateno", "Beginning Story", "Tower"] },
-        {"name": "Activate the Lanayru Tower", "types": ["Zora's Domain", "Lanayru", "East", "Story", "Tower"] },
-        {"name": "Complete 'The Priceless Maracas' Side Quest", "types": ["Kakariko", "Necluda", "East", "West Necluda", "Beginning Story", "Story",]},
-        {"name": "Activate the Wasteland Tower", "types": ["Gerudo", "South", "West", "Tower", "Story"] },
-        {"name": "Activate the Ridgeland Tower", "types": ["Center", "West", "Tower"] },
-        {"name": "Activate the Central Tower", "types": ["Center", "Central Hyrule", "Tower"] },
-        {"name": "Kill a Wizzrobe", "types": []},
-        {"name": "Complete a Minor Test of Strength Shrine", "types": ["Shrine", "Soul Orb", "Heart", "Stamina", "Ancient Item"] }
+        {"name": "Complete 'The Priceless Maracas' Side Quest", "types": ["Kakariko", "Necluda", "Side Quest"]},
+        {"name": "Kill a Hinox", "types": ["Rupee", "Miniboss"] },
+        {"name": "Complete a Minor Test of Strength Shrine", "types": ["Shrine", "Soul Orb", "Heart", "Stamina", "Ancient Item"] },
+        {"name": "Pay 1 Great Fairy", "types": ["North", "East", "West", "Akkala", "Gerudo", "Rito", "Necluda", "West Necluda", "Armor Upgrade", "Rupee", "Great Fairy"] }
     ],
     [
         {"name": "Complete the 'Flown the Coop' Side Quest", "types": ["Impa", "West Necluda", "Kakariko", "Side Quest"] },
+        {"name": "Obtain part of the Climbing Gear set", "types": ["Shrine","Armor"] },
+        {"name": "Collect 5 Korok Seeds", "types": ["Inventory", "Korok", "Weapon", "Shield", "Bow"] },
+        {"name": "Activate the Lake Tower", "types": ["Lake Floria", "Lake Hylia", "Faron", "South", "East", "Tower"] },
+        {"name": "Activate the Hateno Tower", "types": ["East Necluda", "East", "Hateno", "Beginning Story", "Tower"] }
+    ],
+    [
+        {"name": "Complete the 'Crowned Beast' Shrine Quest", "types": ["Shrine", "Shrine Quest", "Soul Orb", "Heart", "Stamina", "Lanayru", "East"] },
+        {"name": "Activate the Lanayru Tower", "types": ["Zora's Domain", "Lanayru", "East", "Story", "Tower"] },
+        {"name": "Activate the Wasteland Tower", "types": ["Gerudo", "South", "West", "Tower", "Story"] },
+        {"name": "Activate the Ridgeland Tower", "types": ["Center", "West", "Tower"] },
+        {"name": "Activate the Central Tower", "types": ["Center", "Central Hyrule", "Tower"] }
+    ],
+    [
         {"name": "Activate the Woodland Tower", "types": ["Korok Forest", "North", "Tower"] },
         {"name": "Activate the Gerudo Tower", "types": ["Gerudo", "South", "West", "Tower", "Story"] },
         {"name": "Activate the Akkala Tower", "types": ["North", "East", "Tower"] },
@@ -42,10 +41,10 @@
         {"name": "Get the Champion's Tunic", "types": ["Kakariko", "Necluda", "East", "West Necluda", "Beginning Story", "Story"] }
     ],
     [
+        {"name": "Complete the 'Master of the Wind' Shrine Quest", "types": ["Shrine", "Shrine Quest", "Soul Orb", "Heart", "Stamina", "Lanayru", "East"] },
         {"name": "Find 5 Koroks in the Dueling Peaks Tower region", "types": ["Korok", "Dueling Peaks", "West Necluda", "Necluda", "East"] },
         {"name": "Find 5 Koroks in the Faron Tower Region", "types": ["Lake Floria", "Lake Hylia", "Faron", "South", "South East", "Korok"] },
         {"name": "Complete the 'Song of Storms' Shrine Quest", "types": ["Shrine Quest", "South", "Faron", "East Necluda", "Shrine", "Heart", "Stamina", "Thunder"] },
-        {"name": "Kill a Hinox", "types": ["Rupee", "Miniboss"] },
         {"name": "Activate the Hebra Tower", "types": ["North", "West", "Tower", "Story", "Hebra"] }
     ],
     [
@@ -69,7 +68,7 @@
         {"name": "Find 5 Koroks in the Woodland Tower Region", "types": ["Korok Forest", "North", "Korok"] },
         {"name": "Find 5 Koroks in the Gerudo Tower Region", "types": ["Gerudo", "South", "West", "Korok"] },
         {"name": "Read Zelda's Diary", "types": ["Central Hyrule", "Hyrule Castle", "North", "Story"] },
-        {"name": "Bake an Apple Pie", "types": ["Rupee"] },
+        {"name": "Bake an Apple Pie", "types": ["Rupee","West"] },
         {"name": "Obtain the Hylian Shield", "types": ["Central Hyrule", "Hyrule Castle", "North"] }
     ],
     [
