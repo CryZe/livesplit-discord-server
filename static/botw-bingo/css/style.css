@@ -86,10 +86,13 @@ h4 {
 }
 
 a {
-	color:inherit;
+	color: #ffffff;
 	text-decoration:none;
 }
-a:hover { color:#fff; }
+a:hover {
+    text-decoration: underline;
+    color: #f7e279;
+}
 
 p {
 	margin:0;
