@@ -49,6 +49,7 @@ fn botw_bingo_board(board: &str) -> String {
         "korok" => include_str!("../bingo-templates/botw-korok.json"),
         "shrine" => include_str!("../bingo-templates/botw-shrine.json"),
         "plateau" => include_str!("../bingo-templates/botw-plateau.json"),
+        "compendium" => include_str!("../bingo-templates/botw-compendium.json"),
         _ => return "Nope".to_string(),
     };
     format!(r#"var bingoList = {}; $(function () {{ srl.bingo(bingoList, 5); }});"#,

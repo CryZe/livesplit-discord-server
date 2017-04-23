@@ -206,6 +206,9 @@ fn create_bingo(_: &mut Context,
             "gp" | "plateau" => {
                 template = ("plateau", include_str!("../bingo-templates/botw-plateau.json"));
             }
+            "compendium" => {
+                template = ("compendium", include_str!("../bingo-templates/botw-compendium.json"));
+            }
             _ => {}
         }
     }
