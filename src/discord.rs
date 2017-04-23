@@ -190,7 +190,7 @@ fn create_bingo(_: &mut Context,
     let mut template = ("normal", include_str!("../bingo-templates/botw.json"));
 
     for param in &params {
-        match param as &str {
+        match &param.to_lowercase() as &str {
             "short" => {
                 mode = (Mode::Short, "short");
             }
