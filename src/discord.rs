@@ -231,10 +231,14 @@ fn create_bingo(_: &mut Context,
             if i != 0 {
                 write!(board_text, " | ").unwrap();
             }
-            write!(board_text, "{}", goal).unwrap();
+            write!(board_text,
+                   "{}",
+                   goal.replace("<u>", "__").replace("</u>", "__").replace("<br>", " "))
+                .unwrap();
         }
         writeln!(board_text).unwrap();
     }
+
     send_text_message(message, &board_text)
 }
 
