@@ -187,10 +187,10 @@ fn create_bingo(_: &mut Context,
                 _: &LSState)
                 -> Result<(), String> {
     let mut mode = (Mode::Normal, "normal");
-    let mut template = ("", include_str!("../bingo-templates/botw.json"));
+    let mut template = ("normal", include_str!("../bingo-templates/botw.json"));
 
     for param in &params {
-        match param {
+        match param as &str {
             "short" => {
                 mode = (Mode::Short, "short");
             }
@@ -198,28 +198,29 @@ fn create_bingo(_: &mut Context,
                 mode = (Mode::Long, "long");
             }
             "korok" => {
-                template = ("korok/", include_str!("../bingo-templates/botw-korok.json"));
+                template = ("korok", include_str!("../bingo-templates/botw-korok.json"));
             }
             "shrine" => {
-                template = ("shrine/", include_str!("../bingo-templates/botw-shrine.json"));
+                template = ("shrine", include_str!("../bingo-templates/botw-shrine.json"));
             }
             "gp" | "plateau" => {
-                template = ("plateau/", include_str!("../bingo-templates/botw-gp.json"));
+                template = ("plateau", include_str!("../bingo-templates/botw-plateau.json"));
             }
             _ => {}
         }
     }
 
-    let template = Template::from_json_str(template).unwrap();
     let (mode, mode_txt) = mode;
     let (path, template) = template;
+
+    let template = Template::from_json_str(template).unwrap();
 
     let mut rng = thread_rng();
     let seed = rng.gen_range(0, 1_000_000);
 
     let board = template.generate(seed, mode);
 
-    let mut board_text = format!("https://livesplit.herokuapp.com/botw/bingo/{}index.\
+    let mut board_text = format!("https://livesplit.herokuapp.com/botw/bingo/{}/index.\
                                   html?seed={}&mode={}\n\n",
                                  path,
                                  seed,

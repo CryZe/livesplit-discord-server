@@ -29,54 +29,30 @@ fn get_state(state: State<Arc<LSState>>) -> JSON<Layout> {
     JSON(user.eval_layout())
 }
 
-#[get("/botw/bingo/<file..>?<params>")]
-fn botw_bingo_params(file: PathBuf, params: &str) -> Option<NamedFile> {
+#[get("/botw/bingo/<board>/<file..>?<params>", rank = 3)]
+fn botw_bingo_params(board: &str, file: PathBuf, params: &str) -> Option<NamedFile> {
     drop(params);
+    drop(board);
     NamedFile::open(Path::new("static/botw-bingo").join(file)).ok()
 }
 
-#[get("/botw/bingo/<file..>")]
-fn botw_bingo(file: PathBuf) -> Option<NamedFile> {
+#[get("/botw/bingo/<board>/<file..>", rank = 2)]
+fn botw_bingo(board: &str, file: PathBuf) -> Option<NamedFile> {
+    drop(board);
     NamedFile::open(Path::new("static/botw-bingo").join(file)).ok()
 }
 
-#[get("/botw/bingo/plateau/<file..>")]
-fn botw_bingo(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("static/botw-bingo").join(file)).ok()
-}
-
-#[get("/botw/bingo/korok/<file..>")]
-fn botw_bingo(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("static/botw-bingo").join(file)).ok()
-}
-
-#[get("/botw/bingo/shrine/<file..>")]
-fn botw_bingo(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("static/botw-bingo").join(file)).ok()
-}
-
-#[get("/botw/bingo/tables/board.js")]
-fn botw_bingo_board() -> String {
+#[get("/botw/bingo/<board>/tables/board.js", rank = 1)]
+fn botw_bingo_board(board: &str) -> String {
+    let board = match board {
+        "normal" => include_str!("../bingo-templates/botw.json"),
+        "korok" => include_str!("../bingo-templates/botw-korok.json"),
+        "shrine" => include_str!("../bingo-templates/botw-shrine.json"),
+        "plateau" => include_str!("../bingo-templates/botw-plateau.json"),
+        _ => return "Nope".to_string(),
+    };
     format!(r#"var bingoList = {}; $(function () {{ srl.bingo(bingoList, 5); }});"#,
-            include_str!("../bingo-templates/botw.json"))
-}
-
-#[get("/botw/bingo/plateau/tables/board.js")]
-fn botw_bingo_board() -> String {
-    format!(r#"var bingoList = {}; $(function () {{ srl.bingo(bingoList, 5); }});"#,
-            include_str!("../bingo-templates/botw-gp.json"))
-}
-
-#[get("/botw/bingo/korok/tables/board.js")]
-fn botw_bingo_board() -> String {
-    format!(r#"var bingoList = {}; $(function () {{ srl.bingo(bingoList, 5); }});"#,
-            include_str!("../bingo-templates/botw-korok.json"))
-}
-
-#[get("/botw/bingo/shrine/tables/board.js")]
-fn botw_bingo_board() -> String {
-    format!(r#"var bingoList = {}; $(function () {{ srl.bingo(bingoList, 5); }});"#,
-            include_str!("../bingo-templates/botw-shrine.json"))
+            board)
 }
 
 pub fn start(state: Arc<LSState>) {
