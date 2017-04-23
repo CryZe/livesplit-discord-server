@@ -40,10 +40,43 @@ fn botw_bingo(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("static/botw-bingo").join(file)).ok()
 }
 
+#[get("/botw/bingo/plateau/<file..>")]
+fn botw_bingo(file: PathBuf) -> Option<NamedFile> {
+    NamedFile::open(Path::new("static/botw-bingo").join(file)).ok()
+}
+
+#[get("/botw/bingo/korok/<file..>")]
+fn botw_bingo(file: PathBuf) -> Option<NamedFile> {
+    NamedFile::open(Path::new("static/botw-bingo").join(file)).ok()
+}
+
+#[get("/botw/bingo/shrine/<file..>")]
+fn botw_bingo(file: PathBuf) -> Option<NamedFile> {
+    NamedFile::open(Path::new("static/botw-bingo").join(file)).ok()
+}
+
 #[get("/botw/bingo/tables/board.js")]
 fn botw_bingo_board() -> String {
     format!(r#"var bingoList = {}; $(function () {{ srl.bingo(bingoList, 5); }});"#,
             include_str!("../bingo-templates/botw.json"))
+}
+
+#[get("/botw/bingo/plateau/tables/board.js")]
+fn botw_bingo_board() -> String {
+    format!(r#"var bingoList = {}; $(function () {{ srl.bingo(bingoList, 5); }});"#,
+            include_str!("../bingo-templates/botw-gp.json"))
+}
+
+#[get("/botw/bingo/korok/tables/board.js")]
+fn botw_bingo_board() -> String {
+    format!(r#"var bingoList = {}; $(function () {{ srl.bingo(bingoList, 5); }});"#,
+            include_str!("../bingo-templates/botw-korok.json"))
+}
+
+#[get("/botw/bingo/shrine/tables/board.js")]
+fn botw_bingo_board() -> String {
+    format!(r#"var bingoList = {}; $(function () {{ srl.bingo(bingoList, 5); }});"#,
+            include_str!("../bingo-templates/botw-shrine.json"))
 }
 
 pub fn start(state: Arc<LSState>) {

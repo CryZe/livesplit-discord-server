@@ -1,0 +1,536 @@
+[
+    [
+        {
+            "name": "obtain 1 korok seed",
+            "types": [
+                "korok"
+            ]
+        },
+        {
+            "name": "Roasted Apple",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "chop down a tree",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "any meal",
+            "types": [
+                "cooking"
+            ]
+        },
+        {
+            "name": "any elixir",
+            "types": [
+                "cooking"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "Spicy Sautéed Peppers",
+            "types": [
+                "cooking"
+            ]
+        },
+        {
+            "name": "Simmered Fruit",
+            "types": [
+                "cooking"
+            ]
+        },
+        {
+            "name": "Meat Skewer",
+            "types": [
+                "cooking"
+            ]
+        },
+        {
+            "name": "Farmer's Pitchfork",
+            "types": [
+                "equipment"
+            ]
+        },
+        {
+            "name": "Energizing Mushroom Skewer",
+            "types": [
+                "cooking"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "Hasty Mushroom Skewer",
+            "types": [
+                "cooking"
+            ]
+        },
+        {
+            "name": "obtain 2 korok seeds",
+            "types": [
+                "korok"
+            ]
+        },
+        {
+            "name": "Hylian Trousers",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "catch a beetle",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "Seared Steak",
+            "types": [
+                "camp"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "Spicy Fruit and Mushroom mix",
+            "types": [
+                "cooking"
+            ]
+        },
+        {
+            "name": "Fruit and Mushroom mix",
+            "types": [
+                "cooking"
+            ]
+        },
+        {
+            "name": "obtain 10 wood",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "Spicy Simmered Fruit",
+            "types": [
+                "cooking"
+            ]
+        },
+        {
+            "name": "Meat and Mushroom Skewer",
+            "types": [
+                "cooking"
+            ]
+        },
+        {
+            "name": "open a Bokoblin camp chest",
+            "types": [
+                "kill",
+                "camp"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "5 Chuchu jelly",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "Courser Bee Honey",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "obtain 4 korok seeds",
+            "types": [
+                "korok"
+            ]
+        },
+        {
+            "name": "Fried Wild Greens",
+            "types": [
+                "cooking"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "Energizing Honey Candy",
+            "types": [
+                "cooking"
+            ]
+        },
+        {
+            "name": "Energizing Honeyed Apple",
+            "types": [
+                "cooking"
+            ]
+        },
+        {
+            "name": "kill a boar",
+            "types": [
+                "kill"
+            ]
+        },
+        {
+            "name": "Soldier's Bow",
+            "types": [
+                "equipment"
+            ]
+        },
+        {
+            "name": "open 2 Bokoblin camp chests",
+            "types": [
+                "kill",
+                "camp"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "5 Rushrooms",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "make a fire",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "5 ancient gears",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "obtain 5 korok seeds",
+            "types": [
+                "korok"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "kill a bokoblin with an explosive barrel",
+            "types": [
+                "kill"
+            ]
+        },
+        {
+            "name": "Spiked Boko Shield",
+            "types": [
+                "kill",
+                "equipment"
+            ]
+        },
+        {
+            "name": "Spiked Boko Club",
+            "types": [
+                "kill",
+                "equipment"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "Throwing Spear",
+            "types": [
+                "equipment"
+            ]
+        },
+        {
+            "name": "5 ancient screws",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "obtain 6 Korok seeds",
+            "types": [
+                "korok"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "Summerwing Butterfly",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "kill a Guardian Scout",
+            "types": [
+                "kill"
+            ]
+        },
+        {
+            "name": "Bokoblin arm",
+            "types": [
+                "kill",
+                "equipment"
+            ]
+        },
+        {
+            "name": "open 3 Bokoblin camp chest",
+            "types": [
+                "kill",
+                "camp"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "explode a skull camp",
+            "types": [
+                "kill"
+            ]
+        },
+        {
+            "name": "obtain 7 korok seeds",
+            "types": [
+                "korok"
+            ]
+        },
+        {
+            "name": "create a working catapult",
+            "types": [
+                "physics"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "5 White Chuchu Jelly",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "5 Keese Wings",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "2 Keese Eyeballs",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "5 Seared Steak",
+            "types": [
+                "camp"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "complete the Magnesis Trial",
+            "types": [
+                "shrines",
+                "story"
+            ]
+        },
+        {
+            "name": "obtain 8 korok seeds",
+            "types": [
+                "korok"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "complete the Bomb Trial",
+            "types": [
+                "shrines",
+                "story"
+            ]
+        },
+        {
+            "name": "Soldier's Broadsword",
+            "types": [
+                "equipment"
+            ]
+        },
+        {
+            "name": "Spiked Boko Bow",
+            "types": [
+                "equipment"
+            ]
+        },
+        {
+            "name": "Spicy Elixir",
+            "types": [
+                "cooking"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "complete the Cryonis Trial",
+            "types": [
+                "shrines",
+                "story"
+            ]
+        },
+        {
+            "name": "obtain 9 korok seeds",
+            "types": [
+                "korok"
+            ]
+        },
+        {
+            "name": "open 3 Bokoblin camp chests",
+            "types": [
+                "kill",
+                "camp"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "obtain the Warm Doublet",
+            "types": [
+                "equipment"
+            ]
+        },
+        {
+            "name": "kill a rusty Guardian",
+            "types": [
+                "kill",
+                "guardian"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "obtain 10 korok seeds",
+            "types": [
+                "korok"
+            ]
+        },
+        {
+            "name": "find 5 amber",
+            "types": [
+                "materials"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "complete the Stasis Trial",
+            "types": [
+                "shrines",
+                "story"
+            ]
+        },
+        {
+            "name": "open 5 Bokoblin camp chest",
+            "types": [
+                "kill",
+                "camp"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "find 5 opal",
+            "types": [
+                "materials"
+            ]
+        },
+        {
+            "name": "obtain 11 korok seeds",
+            "types": [
+                "korok"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "kill a Stone Talus",
+            "types": [
+                "kill"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "obtain 12 korok seeds",
+            "types": [
+                "korok"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "kill 3 rusty Guardians",
+            "types": [
+                "kill",
+                "guardian"
+            ]
+        },
+        {
+            "name": "activate every shrine",
+            "types": [
+                "shrine"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "obtain 15 korok seeds",
+            "types": [
+                "korok"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "complete 4 shrines",
+            "types": [
+                "shrines"
+            ]
+        },
+        {
+            "name": "upgrade hearts",
+            "types": [
+                "upgrade"
+            ]
+        },
+        {
+            "name": "upgrade stamina",
+            "types": [
+                "upgrade"
+            ]
+        }
+    ],
+    [
+        {
+            "name": "obtain paraglider",
+            "types": [
+                "glider",
+                "story"
+            ]
+        },
+        {
+            "name": "read The Old Man's Diary",
+            "types": [
+                "glider",
+                "story"
+            ]
+        }
+    ]
+]
