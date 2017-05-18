@@ -8,26 +8,25 @@ use dotenv::var;
 use std::path::{Path, PathBuf};
 use rocket::response::NamedFile;
 
-#[get("/split")]
-fn split(state: State<Arc<LSState>>) -> JSON<Layout> {
-    let mut user = state.user(0, "REST User");
-    user.timer.split();
-    user.timer.start();
-    JSON(user.eval_layout())
-}
+// #[get("/split")]
+// fn split(state: State<Arc<LSState>>) -> JSON<Layout> {
+//     let mut user = state.user(0, "REST User");
+//     user.timer.split();
+//     JSON(user.eval_layout())
+// }
 
-#[get("/reset")]
-fn reset(state: State<Arc<LSState>>) -> JSON<Layout> {
-    let mut user = state.user(0, "REST User");
-    user.timer.reset(true);
-    JSON(user.eval_layout())
-}
+// #[get("/reset")]
+// fn reset(state: State<Arc<LSState>>) -> JSON<Layout> {
+//     let mut user = state.user(0, "REST User");
+//     user.timer.reset(true);
+//     JSON(user.eval_layout())
+// }
 
-#[get("/state")]
-fn get_state(state: State<Arc<LSState>>) -> JSON<Layout> {
-    let mut user = state.user(0, "REST User");
-    JSON(user.eval_layout())
-}
+// #[get("/state")]
+// fn get_state(state: State<Arc<LSState>>) -> JSON<Layout> {
+//     let mut user = state.user(0, "REST User");
+//     JSON(user.eval_layout())
+// }
 
 #[get("/botw/bingo/<board>/<file..>?<params>", rank = 3)]
 fn botw_bingo_params(board: &str, file: PathBuf, params: &str) -> Option<NamedFile> {
@@ -68,9 +67,9 @@ pub fn start(state: Arc<LSState>) {
 
         rocket::custom(config, true)
             .mount("/",
-                   routes![split,
-                           reset,
-                           get_state,
+                   routes![//    split,
+                           //    reset,
+                           //    get_state,
                            botw_bingo,
                            botw_bingo_params,
                            botw_bingo_board])

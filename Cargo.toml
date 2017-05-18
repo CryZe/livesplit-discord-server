@@ -4,13 +4,13 @@ version = "0.1.0"
 authors = ["Christopher Serr <christopher.serr@gmail.com>"]
 
 [dependencies]
-livesplit-core = { git = "https://github.com/CryZe/livesplit-core" }
-speedrun-bingo = { git = "https://github.com/CryZe/speedrun-bingo" }
-rocket = "0.2.0"
-rocket_codegen = "0.2.0"
+livesplit-core = "0.4.1"
+speedrun-bingo = { git = "https://github.com/CryZe/speedrun-bingo", rev = "9c5a19b56adb3353e3d0e5bae81d37d38e48f7b8" }
+rocket = "0.2.6"
+rocket_codegen = "0.2.6"
 parking_lot = "0.3.8"
-serde_derive = "0.9.5"
-serde = "0.9.5"
+serde_derive = "1.0.6"
+serde = "1.0.6"
 serenity = "0.1.5"
 hyper = "0.10.4"
 hyper-rustls = "0.3.1"
@@ -18,7 +18,8 @@ chashmap = "2.1.0"
 log = "0.3.6"
 dotenv = { git = "https://github.com/slapresta/rust-dotenv", rev = "a82fb37876603a510b2ddb04ec5b4d471fad5056" }
 rand = "0.3.15"
+image = "0.13.0"
 
 [dependencies.rocket_contrib]
-version = "0.2.0"
+version = "0.2.6"
 features = ["handlebars_templates"]

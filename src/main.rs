@@ -16,6 +16,7 @@ extern crate chashmap;
 extern crate log;
 extern crate speedrun_bingo;
 extern crate rand;
+extern crate image;
 
 use chashmap::{CHashMap, WriteGuard};
 use livesplit_core::{Timer, Run, Segment};
@@ -72,26 +73,28 @@ impl LSState {
                 return user;
             }
             info!("New User {}", name.as_ref());
-            let mut run = Run::new(vec![Segment::new("First"),
-                                        Segment::new("Second"),
-                                        Segment::new("Third"),
-                                        Segment::new("End")]);
+            let mut run = Run::new();
+            run.push_segment(Segment::new("First"));
+            run.push_segment(Segment::new("Second"));
+            run.push_segment(Segment::new("Third"));
+            run.push_segment(Segment::new("End"));
             run.set_game_name("Wind Waker");
             run.set_category_name("Any%");
             let timer = Timer::new(run);
-            self.users.insert(id,
-                              User {
-                                  name: name.as_ref().to_owned(),
-                                  components: Components {
-                                      title: title::Component::new(),
-                                      splits: splits::Component::new(),
-                                      timer: timer::Component::new(),
-                                      previous_segment: previous_segment::Component::new(),
-                                      sum_of_best: sum_of_best::Component::new(),
-                                      possible_time_save: possible_time_save::Component::new(),
-                                  },
-                                  timer: timer,
-                              });
+            self.users
+                .insert(id,
+                        User {
+                            name: name.as_ref().to_owned(),
+                            components: Components {
+                                title: title::Component::new(),
+                                splits: splits::Component::new(),
+                                timer: timer::Component::new(),
+                                previous_segment: previous_segment::Component::new(),
+                                sum_of_best: sum_of_best::Component::new(),
+                                possible_time_save: possible_time_save::Component::new(),
+                            },
+                            timer: timer,
+                        });
         }
     }
 }
@@ -104,16 +107,18 @@ impl User {
             timer: self.components.timer.state(&mut self.timer),
             previous_segment: self.components.previous_segment.state(&mut self.timer),
             sum_of_best: self.components.sum_of_best.state(&mut self.timer),
-            possible_time_save: self.components.possible_time_save.state(&mut self.timer),
+            possible_time_save: self.components
+                .possible_time_save
+                .state(&mut self.timer),
         }
     }
 }
 
 fn main() {
     let state = Arc::new(LSState {
-        users: CHashMap::new(),
-        race: RwLock::new(Race::NoRace),
-    });
+                             users: CHashMap::new(),
+                             race: RwLock::new(Race::NoRace),
+                         });
 
     rest_api::start(state.clone());
     discord::start(state);

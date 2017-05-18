@@ -16,20 +16,24 @@ use serenity::utils::builder::CreateEmbed;
 use serenity::utils::Colour;
 use std::{thread, time};
 use dotenv::var;
-use speedrun_bingo::{Mode, Template};
+use speedrun_bingo::{self, Mode, Template};
 use rand::{Rng, thread_rng};
+use image::png::PNGEncoder;
+use image::ColorType;
 
 fn send_embed_message<F>(message: &Message, create: F) -> Result<(), String>
     where F: FnOnce(CreateEmbed) -> CreateEmbed
 {
-    message.channel_id
+    message
+        .channel_id
         .send_message(|m| m.embed(create))
         .map_err(|_| String::from("Couldn't send message"))?;
     Ok(())
 }
 
 fn send_editable_text_message(message: &Message, text: &str) -> Result<Message, String> {
-    message.channel_id
+    message
+        .channel_id
         .send_message(|m| m.content(text))
         .map_err(|_| String::from("Couldn't send message"))
 }
@@ -51,12 +55,13 @@ fn layout(user: &mut User, embed: CreateEmbed) -> CreateEmbed {
         Color::Paused => (0x66, 0x66, 0x66),
         Color::PersonalBest => (0x4d, 0xa6, 0xff),
     };
-    let mut embed = embed.author(|a| {
-            a.name("LiveSplit")
-                .icon_url("https://raw.githubusercontent.\
+    let mut embed = embed
+        .author(|a| {
+                    a.name("LiveSplit")
+                        .icon_url("https://raw.githubusercontent.\
                            com/LiveSplit/LiveSplit/master/LiveSplit/Resources/Icon.png")
-                .url("http://livesplit.org")
-        })
+                        .url("http://livesplit.org")
+                })
         .colour(Colour::from_rgb(r, g, b))
         .description(&format!(r"
 **{}{}**
@@ -77,10 +82,10 @@ fn layout(user: &mut User, embed: CreateEmbed) -> CreateEmbed {
         .title(&format!("{} - {}", layout.title.game, layout.title.category));
 
     for segment in &layout.splits.splits {
-        embed =
-            embed.field(|f| {
-                f.name(&segment.name).value(&format!("{}  {}", segment.delta, segment.time))
-            });
+        embed = embed.field(|f| {
+                                f.name(&segment.name)
+                                    .value(&format!("{}  {}", segment.delta, segment.time))
+                            });
     }
 
     embed
@@ -97,7 +102,6 @@ fn split(_: &mut Context,
          -> Result<(), String> {
     let mut user = user(state, message);
     user.timer.split();
-    user.timer.start();
     send_embed_message(message, |m| layout(&mut user, m))
 }
 
@@ -133,7 +137,8 @@ fn load_race_splits(_: &mut Context,
         Race::InProgress(_) => send_text_message(message, "The Race is already in Progress!"),
         Race::Setup(ref entrants) => {
             let id = entrants[0].0;
-            let master = state.users
+            let master = state
+                .users
                 .get(&id)
                 .ok_or_else(|| String::from("User not found"))?;
             user.timer = master.timer.clone();
@@ -152,9 +157,9 @@ fn load_splits(_: &mut Context,
         let ssl = TlsClient::new();
         let connector = HttpsConnector::new(ssl);
         let client = HyperClient::with_connector(connector);
-        if let Ok(mut response) =
-            client.get(&format!("https://splits.io/{}/download/livesplit", param))
-                .send() {
+        if let Ok(mut response) = client
+               .get(&format!("https://splits.io/{}/download/livesplit", param))
+               .send() {
             let mut splits = Vec::new();
             if let Ok(_) = response.read_to_end(&mut splits) {
                 if let Ok(run) = composite::parse(Cursor::new(splits), None, false) {
@@ -224,25 +229,27 @@ fn create_bingo(_: &mut Context,
     let board = template.generate(seed, mode);
 
     let mut board_text = format!("https://livesplit.herokuapp.com/botw/bingo/{}/index.\
-                                  html?seed={}&mode={}\n\n",
+                                  html?seed={}&mode={}",
                                  path,
                                  seed,
                                  mode_txt);
 
-    for row in &board.cells {
-        for (i, goal) in row.iter().enumerate() {
-            if i != 0 {
-                write!(board_text, " | ").unwrap();
-            }
-            write!(board_text,
-                   "{}",
-                   goal.replace("<u>", "__").replace("</u>", "__").replace("<br>", " "))
-                .unwrap();
-        }
-        writeln!(board_text).unwrap();
-    }
+    static FONT: &[u8] = include_bytes!("../FiraSans-Regular.ttf");
+    const CELL_SIZE: u32 = 150;
+    const FONT_SIZE: f32 = 25.0;
+    const CELL_PADDING: i32 = 5;
 
-    send_text_message(message, &board_text)
+    let image = speedrun_bingo::render(&board, CELL_SIZE, CELL_PADDING, FONT, FONT_SIZE);
+
+    let mut buffer = Vec::new();
+    PNGEncoder::new(&mut buffer).encode(&image, image.width(), image.height(), ColorType::RGBA(8));
+
+    message
+        .channel_id
+        .send_file(Cursor::new(buffer), "bingo.png", |m| m.content(&board_text))
+        .map_err(|_| String::from("Couldn't send message"))?;
+
+    Ok(())
 }
 
 fn entrants(_: &mut Context,
@@ -263,12 +270,13 @@ fn entrants(_: &mut Context,
                 }
                 write!(message,
                        "{} ({})",
-                       state.users
+                       state
+                           .users
                            .get(&entrant)
                            .ok_or_else(|| String::from("User not found"))?
                            .name,
                        if status { "Ready" } else { "Not Ready" })
-                    .unwrap();
+                        .unwrap();
             }
             message.into()
         }
@@ -282,11 +290,12 @@ fn entrants(_: &mut Context,
                 }
                 write!(message,
                        "{}",
-                       state.users
+                       state
+                           .users
                            .get(&entrant)
                            .ok_or_else(|| String::from("User not found"))?
                            .name)
-                    .unwrap();
+                        .unwrap();
             }
             message.into()
         }
@@ -329,7 +338,10 @@ fn ready(_: &mut Context,
         }
         Race::Setup(ref mut entrants) => {
             let response = if let Some(&mut (_, ref mut status)) =
-                entrants.iter_mut().filter(|&&mut (id, _)| id == message.author.id.0).next() {
+                entrants
+                    .iter_mut()
+                    .filter(|&&mut (id, _)| id == message.author.id.0)
+                    .next() {
                 if *status {
                     "You are already ready!"
                 } else {
@@ -349,19 +361,22 @@ fn ready(_: &mut Context,
 
                 thread::sleep(time::Duration::from_secs(3));
                 for remaining_seconds in (1..11).rev() {
-                    message.edit(&format!("**{}**", remaining_seconds), |x| x)
+                    message
+                        .edit(&format!("**{}**", remaining_seconds), |x| x)
                         .map_err(|_| String::from("Couldn't edit message"))?;
                     thread::sleep(time::Duration::from_secs(1));
                 }
 
-                message.edit("**Go!**", |x| x).map_err(|_| String::from("Couldn't edit message"))?;
+                message
+                    .edit("**Go!**", |x| x)
+                    .map_err(|_| String::from("Couldn't edit message"))?;
 
                 for entrant in &entrants {
-                    let mut user = state.users
+                    let mut user = state
+                        .users
                         .get_mut(entrant)
                         .ok_or_else(|| String::from("User not found"))?;
                     user.timer.split();
-                    user.timer.start();
                 }
 
                 Race::InProgress(entrants)
@@ -437,7 +452,12 @@ fn verify_bingo_board() {
 
     template.generate(seed, Mode::Short);
 
-    let mut goals = template.0.iter().flat_map(|r| r.iter()).map(|g| &g.name).collect::<Vec<_>>();
+    let mut goals = template
+        .0
+        .iter()
+        .flat_map(|r| r.iter())
+        .map(|g| &g.name)
+        .collect::<Vec<_>>();
     goals.sort();
 
     for (a, b) in goals.iter().zip(goals.iter().skip(1)) {
