@@ -5,7 +5,7 @@ authors = ["Christopher Serr <christopher.serr@gmail.com>"]
 
 [dependencies]
 livesplit-core = "0.4.1"
-speedrun-bingo = { git = "https://github.com/CryZe/speedrun-bingo", rev = "9c5a19b56adb3353e3d0e5bae81d37d38e48f7b8" }
+speedrun-bingo = { git = "https://github.com/CryZe/speedrun-bingo", rev = "69d80227f89265b9332bd0e7a97e110ff767555b" }
 rocket = "0.2.6"
 rocket_codegen = "0.2.6"
 parking_lot = "0.3.8"
