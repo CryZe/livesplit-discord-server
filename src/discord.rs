@@ -234,9 +234,9 @@ fn create_bingo(_: &mut Context,
                                  seed,
                                  mode_txt);
 
-    static FONT: &[u8] = include_bytes!("../FiraSans-Regular.ttf");
+    static FONT: &[u8] = include_bytes!("../Calamity-Bold.ttf");
     const CELL_SIZE: u32 = 150;
-    const FONT_SIZE: f32 = 25.0;
+    const FONT_SIZE: f32 = 20.0;
     const CELL_PADDING: i32 = 5;
 
     let image = speedrun_bingo::render(&board, CELL_SIZE, CELL_PADDING, FONT, FONT_SIZE);
@@ -450,7 +450,15 @@ fn verify_bingo_board() {
     let mut rng = thread_rng();
     let seed = rng.gen_range(0, 1_000_000);
 
-    template.generate(seed, Mode::Short);
+    let board = template.generate(seed, Mode::Short);
+
+    static FONT: &[u8] = include_bytes!("../Calamity-Bold.ttf");
+    const CELL_SIZE: u32 = 150;
+    const FONT_SIZE: f32 = 20.0;
+    const CELL_PADDING: i32 = 5;
+
+    let image = speedrun_bingo::render(&board, CELL_SIZE, CELL_PADDING, FONT, FONT_SIZE);
+    image.save("test.png");
 
     let mut goals = template
         .0
