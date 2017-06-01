@@ -3230,14 +3230,6 @@
             ]
         },
         {
-            "name": "Mount the Lord of the Mountain",
-            "types": [
-                "Horse",
-                "Ridgeland",
-                "Stamina"
-            ]
-        },
-        {
             "name": "Buy a House",
             "types": [
                 "Hateno",
